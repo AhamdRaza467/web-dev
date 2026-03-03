@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiverr Style Layout - Pure CSS</title>
+    <style>
+        /* 1. Global Reset: Taake default browser margins khatam ho jayein */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            padding: 40px;
+        }
+
+        /* 2. Top Navigation Icons Section */
+        .nav-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            gap: 10px;
+        }
+
+        .icon-box {
+            display: flex;
+            flex-direction: column; /* Icon oper, text neechay */
+            align-items: center;
+            text-align: center;
+            width: 100px;
+        }
+
+        /* Hum ne image ki jaga ek CSS box banaya hai */
+        .css-icon-placeholder {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            background: #f9f9f9;
+        }
+
+        .icon-box span {
+            font-size: 12px;
+            font-weight: 600;
+            color: #404145;
+        }
+
+        /* 3. Popular Services Section */
+        .section-title {
+            font-size: 32px;
+            color: #404145;
+            margin-bottom: 25px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 60px;
+            overflow-x: auto; /* Agar screen choti ho tou scroll bar aa jaye */
+            padding-bottom: 10px;
+        }
+
+        .card {
+            min-width: 220px;
+            height: 320px;
+            background-color: #064732; /* Default dark green */
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+            transition: transform 0.3s ease; /* Hover effect ke liye */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        /* Image ki jagah card ke andar ek white design box */
+        .inner-graphic-box {
+            width: 100%;
+            height: 140px;
+            background: rgba(255, 255, 255, 0.2); /* Transparent white */
+            border-radius: 12px;
+            border: 1px dashed rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Different Colors for Different Cards */
+        .card-website { background-color: #00732f; }
+        .card-video { background-color: #be5a1a; }
+        .card-software { background-color: #4d1727; }
+
+        /* 4. Bottom Banner Section */
+        .banner {
+            background-color: #400d12;
+            border-radius: 20px;
+            padding: 80px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .banner h1 span {
+            color: #ff7458; /* 'fingertips' word ka alag color */
+            font-style: italic;
+        }
+
+        .join-btn {
+            background-color: white;
+            color: #400d12;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="nav-icons">
+        <div class="icon-box">
+            <div class="css-icon-placeholder"></div>
+            <span>Programming & Tech</span>
+        </div>
+        <div class="icon-box">
+            <div class="css-icon-placeholder"></div>
+            <span>Graphics & Design</span>
+        </div>
+        <div class="icon-box">
+            <div class="css-icon-placeholder"></div>
+            <span>Digital Marketing</span>
+        </div>
+        <div class="icon-box">
+            <div class="css-icon-placeholder"></div>
+            <span>Video & Animation</span>
+        </div>
+        <div class="icon-box">
+            <div class="css-icon-placeholder"></div>
+            <span>AI Services</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Popular services</h2>
+
+    <div class="cards-container">
+        <div class="card card-website">
+            <h3>Website Development</h3>
+            <div class="inner-graphic-box">Visual Placeholder</div>
+        </div>
+
+        <div class="card card-video">
+            <h3>Video Editing</h3>
+            <div class="inner-graphic-box">Visual Placeholder</div>
+        </div>
+
+        <div class="card card-software">
+            <h3>Software Development</h3>
+            <div class="inner-graphic-box">Visual Placeholder</div>
+        </div>
+
+        <div class="card" style="background-color: #1f3d0c;">
+            <h3>Book Publishing</h3>
+            <div class="inner-graphic-box">Visual Placeholder</div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <h1>Freelance services at your <span>fingertips</span></h1>
+        <button class="join-btn">Join Fiverr</button>
+    </div>
+
+</body>
+</html>
